@@ -3,35 +3,23 @@ import styled from 'styled-components';
 export const ListContainer = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 10px 0;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
+  margin: 0;
 
   li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    background-color: #fff;
-    overflow: hidden; /* Evita conteúdo fora do elemento */
+    border-bottom: 1px solid ${(props) => props.theme.text};
+    background-color: ${(props) => props.theme.body};
+    color: ${(props) => props.theme.text};
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
-  @media (max-width: 768px) {
-    width: 90%; /* Para telas menores */
+  span {
+    flex: 1;
+    text-align: left;
   }
 `;
-
-// export const StyledButton = styled.button`
-//   background-color: #f44336;
-//   color: white;
-//   border: none;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   padding: 5px 10px;
-
-//   &:hover {
-//     background-color: #d32f2f;
-//   }
-// `;

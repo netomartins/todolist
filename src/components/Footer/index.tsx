@@ -4,7 +4,7 @@ import { Container, Text } from './style';
 const Footer: React.FC = () => {
   return (
     <Container>
-      <Text> im3 © 2024</Text>
+      <Text>im3 © 2024</Text>
     </Container>
   );
 };
